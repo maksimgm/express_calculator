@@ -24,9 +24,7 @@ app.get('/:op/:a/:b',function(req,res){
   }else if(req.params.op === "divide"){
     var d = parseFloat(req.params.a) / parseFloat(req.params.b);
     res.render("calculator",{op:d.toString()});
-  } 
-
-
+  }
   // var conversion = operators.replace(/"/g, "");
   // var c = parseFloat(req.params.a) + conversion[req.params.op] + parseFloat(req.params.b);
   // console.log(c);

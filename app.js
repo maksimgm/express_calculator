@@ -14,19 +14,15 @@ app.set('view engine','ejs');
 app.get('/:op/:a/:b',function(req,res){
   if(req.params.op === "add") {
     var c = parseFloat(req.params.a) + parseFloat(req.params.b);
-    // res.send(req.params.op);
     res.render("calculator",{op:c.toString()});
   }else if(req.params.op === "subtract"){
     var s = parseFloat(req.params.a) - parseFloat(req.params.b);
-    // res.send(req.params.op);
     res.render("calculator",{op:s.toString()});
   } else if(req.params.op === "multiply") {
     var m = parseFloat(req.params.a) * parseFloat(req.params.b);
-    // res.send(req.params.op);
     res.render("calculator",{op:m.toString()});
   }else if(req.params.op === "divide"){
     var d = parseFloat(req.params.a) / parseFloat(req.params.b);
-    // res.send(req.params.op);
     res.render("calculator",{op:d.toString()});
   } 
 
